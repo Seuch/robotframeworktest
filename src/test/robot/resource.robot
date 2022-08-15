@@ -42,3 +42,13 @@ Submit Credentials
 Secure Area Is Open
     Location Should Be    ${SECURE URL}
     Page Should Contain    Secure Area
+
+Login With Credentials Should Fail
+    [Arguments]    ${username}    ${password}
+    Input Username    ${username}
+    Resource.Input Password    ${password}
+    Submit Credentials
+    Login Should Have Failed
+
+Login Should Have Failed
+    Page Should Contain    is invalid!
