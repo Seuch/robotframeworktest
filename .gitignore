@@ -2,3 +2,4 @@ output.*
 log.*
 report.*
 *.xml
+*.png
